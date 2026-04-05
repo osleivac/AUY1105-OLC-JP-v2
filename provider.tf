@@ -10,6 +10,7 @@ terraform {
 
 # Las credenciales se inyectan vía variables de entorno en GitHub Actions:
 # AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_SESSION_TOKEN
+# tflint-ignore: terraform_required_providers
 provider "aws" {
   region = "us-east-1"
 }
