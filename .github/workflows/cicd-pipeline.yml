@@ -61,11 +61,11 @@ jobs:
 
       - name: OPA Policy - No SSH Público
         run: |
-          opa eval -i tfplan.json -d no_ssh_public.rego "data.terraform.authz.violation" | grep -q '"result": \[\]' || (echo "VIOLACION: SSH abierto al publico detectado." && exit 1)
+          opa eval -i tfplan.json -d terraform_ssh_check.rego "data.terraform.authz.violation" | grep -q '"result": \[\]' || (echo "VIOLACION: SSH abierto al publico detectado." && exit 1)
 
       - name: OPA Policy - Solo T2 Micro
         run: |
-          opa eval -i tfplan.json -d only_t2_micro.rego "data.terraform.authz.violation" | grep -q '"result": \[\]' || (echo "VIOLACION: Tipo de instancia no permitido." && exit 1)
+          opa eval -i tfplan.json -d terraform_ec2_check.rego "data.terraform.authz.violation" | grep -q '"result": \[\]' || (echo "VIOLACION: Tipo de instancia no permitido." && exit 1)
 
   terraform-apply:
     name: "Despliegue (Terraform Apply)"
