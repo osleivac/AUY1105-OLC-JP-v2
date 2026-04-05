@@ -11,7 +11,7 @@ variable "public_key" {
 variable "mi_ip_publica" {
   description = "Tu IP pública para restringir el acceso SSH (ej. 201.189.206.99/32)"
   type        = string
-  default     = "0.0.0.0/0" # Cambiar esto en el PR a tu IP para que pase OPA
+  default     = "181.43.52.214/32" # Cambiar esto en el PR a tu IP para que pase OPA
 }
 
 # Obtener dinámicamente la última AMI de Ubuntu 24.04
