@@ -1,4 +1,4 @@
-package terraform.authz
+package terraform.ssh
 
 # Política 1: Bloquear acceso SSH publico (0.0.0.0/0)
 # Criterio: Rúbrica de evaluación - Denegar SSH público

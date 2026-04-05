@@ -1,8 +1,7 @@
-package terraform.authz
+package terraform.ec2
 
-Política 2: Solo permitir instancias EC2 de tipo t2.micro
-
-Criterio: Rúbrica de evaluación - Restringir t2.micro
+# Política 2: Solo permitir instancias EC2 de tipo t2.micro
+# Criterio: Rúbrica de evaluación - Restringir t2.micro
 
 default allow_instance_type = false
 
