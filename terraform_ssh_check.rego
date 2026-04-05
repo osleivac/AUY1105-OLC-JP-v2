@@ -1,14 +1,5 @@
 package terraform.ssh
 
-# Política 1: Bloquear acceso SSH publico (0.0.0.0/0)
-# Criterio: Rúbrica de evaluación - Denegar SSH público
-
-default allow = false
-
-allow {
-not ssh_public_access
-package terraform.ssh
-
 import rego.v1
 
 default allow := false
