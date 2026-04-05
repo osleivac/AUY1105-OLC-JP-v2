@@ -8,7 +8,7 @@ resource "aws_vpc" "AUY1105-tiendatech-vpc" {
   cidr_block           = "10.1.0.0/16"
   enable_dns_support   = true
   enable_dns_hostnames = true
-  tags = { Name = "AUY1105-tiendatech-vpc" }
+  tags                 = { Name = "AUY1105-tiendatech-vpc" }
 }
 
 # Internet Gateway para salida a Internet
@@ -23,7 +23,7 @@ resource "aws_subnet" "AUY1105-tiendatech-subnet-pub-1" {
   cidr_block              = "10.1.1.0/24"
   availability_zone       = "us-east-1a"
   map_public_ip_on_launch = true # Necesario para acceso SSH
-  tags = { Name = "AUY1105-tiendatech-subnet-pub-1" }
+  tags                    = { Name = "AUY1105-tiendatech-subnet-pub-1" }
 }
 
 # Tabla de ruteo pública
